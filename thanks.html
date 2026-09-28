@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お申し込みありがとうございます｜AIで夢を叶える♡ 10月3日 蒲田リアル会</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap">
+
+<!-- ============================================================
+     お支払いが終わった方に表示されるページ
+
+     ★ 直す場所
+       (1) 公式LINEのリンク … 「lin.ee」で検索
+       (2) 日時・会場 … そのまま書いてあります
+     ============================================================ -->
+
+<style>
+:root{
+  --paper:   #fff8fa;
+  --paper2:  #fffdf6;
+  --paper3:  #fdeef3;
+  --card:    #ffffff;
+  --line:    #f7dde5;
+  --pink:    #e8497f;
+  --pink-dp: #c62f65;
+  --pink-lt: #fcdde7;
+  --gold:    #b8901f;
+  --green:   #46a832;
+  --ink:     #2b2226;
+  --ink-sub: #524449;
+  --shadow:   0 10px 26px rgba(200,110,150,.16), 0 3px 8px rgba(150,80,110,.06);
+  --shadow-l: 0 18px 42px rgba(200,110,150,.22), 0 4px 10px rgba(150,80,110,.08);
+  --round: "Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic UI",sans-serif;
+  --body:  "Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--paper); font-family:var(--body); color:var(--ink);
+  line-height:1.9; font-size:19px; font-weight:600; letter-spacing:.02em;
+  padding:0 0 50px;
+}
+img{ max-width:100%; display:block; }
+.wrap{ width:100%; max-width:600px; margin:0 auto; padding:0 18px; }
+
+/* 上のあいさつ */
+.head{
+  text-align:center; padding:44px 0 34px;
+  background:
+    radial-gradient(120% 60% at 50% 0%, #fff6d9 0%, rgba(255,246,217,0) 62%),
+    linear-gradient(170deg,#ffe3ee 0%,#fff2f6 55%,#fff8fa 100%);
+}
+.head .mark{
+  width:76px; height:76px; border-radius:50%; margin:0 auto 16px;
+  background:linear-gradient(135deg,#f582aa,#e0407a); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-size:2.2rem;
+  box-shadow:0 10px 24px rgba(224,64,122,.34);
+}
+.head h1{
+  font-family:var(--round); font-weight:900; font-size:1.7rem;
+  color:var(--pink-dp); line-height:1.5; margin-bottom:12px;
+}
+.head p{ font-size:1rem; color:var(--ink-sub); line-height:1.85; }
+
+/* 番号つきの箱 */
+.step{
+  background:var(--card); border-radius:20px; box-shadow:var(--shadow);
+  padding:26px 20px 24px; margin-bottom:18px; border:2px solid var(--pink-lt);
+}
+.step .no{
+  display:inline-block; font-family:var(--round); font-weight:900; font-size:.92rem;
+  color:#fff; background:var(--pink); padding:4px 18px; border-radius:100px; margin-bottom:12px;
+}
+.step h2{
+  font-family:var(--round); font-weight:900; font-size:1.34rem;
+  color:var(--pink-dp); line-height:1.55; margin-bottom:12px;
+}
+.step p{ font-size:1rem; line-height:1.9; margin-bottom:1em; }
+.step p:last-child{ margin-bottom:0; }
+.step strong{ color:var(--pink-dp); }
+.step small{ color:var(--ink-sub); font-size:.9rem; }
+
+/* LINEボタン */
+.btn-line{
+  display:block; width:100%; margin:14px auto 0;
+  font-family:var(--round); font-weight:900;
+  background:linear-gradient(135deg,#7dd36a,#3ea22b);
+  color:#fff; text-decoration:none; text-align:center;
+  font-size:1.3rem; padding:20px 16px; border-radius:100px;
+  box-shadow:0 12px 26px rgba(62,162,43,.34);
+}
+.btn-line small{
+  display:block; font-family:var(--body); font-weight:600;
+  font-size:.86rem; color:#fff; opacity:.96; margin-top:4px;
+}
+
+/* 「AI」と送ってもらうお願い */
+.ask{
+  margin-top:20px; background:var(--paper2);
+  border:2px dashed var(--green); border-radius:16px; padding:20px 18px;
+}
+.ask-ttl{
+  font-family:var(--round); font-weight:900; font-size:1.08rem;
+  color:var(--green); margin-bottom:10px; text-align:center;
+}
+.ask p{ font-size:1.02rem; text-align:center; margin-bottom:0; }
+.ask p b{ color:var(--green); font-size:1.24rem; }
+.ask .why{
+  font-size:.93rem; color:var(--ink-sub); text-align:left;
+  line-height:1.85; margin-top:14px;
+}
+.ask .why strong{ color:var(--pink-dp); }
+
+/* LINEの吹き出し風 */
+.bubble-wrap{ display:flex; justify-content:flex-end; margin:14px 0 4px; }
+.bubble{
+  position:relative; background:#8de055; color:#1f3d14;
+  font-family:var(--round); font-weight:900; font-size:1.4rem;
+  padding:10px 26px; border-radius:18px;
+  box-shadow:0 4px 10px rgba(80,140,50,.22);
+}
+.bubble::after{
+  content:""; position:absolute; right:-8px; top:14px;
+  border-left:10px solid #8de055;
+  border-top:7px solid transparent; border-bottom:7px solid transparent;
+}
+
+/* 当日の情報 */
+.info{ border:none; }
+.info .row{
+  display:flex; gap:12px; padding:12px 2px;
+  border-bottom:2px dotted var(--line); font-size:1rem;
+}
+.info .row:last-child{ border-bottom:none; }
+.info .k{
+  flex:0 0 76px; font-family:var(--round); font-weight:700;
+  font-size:.92rem; color:var(--pink-dp); padding-top:.15em;
+}
+.info .v{ flex:1; line-height:1.75; }
+.info .v small{ display:block; color:var(--ink-sub); font-size:.88rem; margin-top:2px; }
+.info .v a{ color:var(--pink-dp); }
+
+.note{
+  background:var(--paper2); border:2px dashed var(--pink-lt); border-radius:16px;
+  padding:18px 18px; font-size:.97rem; line-height:1.85; color:var(--ink-sub);
+}
+.note b{ color:var(--pink-dp); }
+
+.sign{
+  text-align:center; margin-top:30px; font-size:.95rem;
+  color:var(--ink-sub); line-height:1.9;
+}
+.sign .name{ display:block; font-family:var(--round); font-weight:900; font-size:1.24rem; color:var(--pink-dp); line-height:1.5; }
+.sign .role{ display:block; font-family:var(--round); font-weight:700; font-size:.88rem; color:var(--gold); letter-spacing:.14em; }
+.sign .belong{ display:block; font-size:.9rem; color:var(--ink-sub); line-height:1.6; }
+
+@media (min-width:700px){
+  body{ font-size:19.5px; }
+  .head h1{ font-size:2.1rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div class="mark">♡</div>
+  <h1>お申し込み<br>ありがとうございます！</h1>
+  <p>お支払いを確認しました。<br>10月3日、お会いできるのを楽しみにしています。</p>
+</div>
+
+<div class="wrap">
+
+  <!-- 1. LINE登録 -->
+  <div class="step">
+    <span class="no">STEP 1</span>
+    <h2>ご連絡のために、<br>こちらにご登録ください</h2>
+    <p><strong>当日のご案内・持ち物の確認・事前のご質問は、すべてLINEでやりとりします。</strong>下のボタンを押すだけで登録できます。</p>
+
+    <!-- ★ lin.ee = 公式LINEのリンク -->
+    <a class="btn-line" href="https://lin.ee/v4imfbp">
+      公式LINEに登録する
+      <small>押すとLINEがひらきます</small>
+    </a>
+
+    <!-- 登録後にメッセージを送ってもらうお願い -->
+    <div class="ask">
+      <div class="ask-ttl">ご登録のあと、必ず<br>「AI」とコメントを送ってくださいね！</div>
+
+      <div class="bubble-wrap">
+        <div class="bubble">AI</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. 当日のこと -->
+  <div class="step">
+    <span class="no">STEP 2</span>
+    <h2>当日のこと</h2>
+
+    <div class="info">
+      <div class="row"><div class="k">日　時</div><div class="v">10月3日（土）15:30〜17:30<small>受付開始 15:15</small></div></div>
+      <div class="row"><div class="k">会　場</div><div class="v">ひだまりカフェ（オーガニック）<small>東京都大田区蒲田4-31-1<br>JR蒲田駅 徒歩6分／京急蒲田駅 徒歩9分</small>
+        <a href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E8%92%B2%E7%94%B04-31-1" target="_blank" rel="noopener">▶ 地図をひらく</a>
+      </div></div>
+      <div class="row"><div class="k">持ち物</div><div class="v">ChatGPTが使えるスマートフォン<small>無料版で大丈夫です。まだ入れていない方は、LINEでご案内しますのでご安心ください。</small></div></div>
+    </div>
+  </div>
+
+  <p class="sign">
+    10月3日、蒲田でお待ちしています♡<br><br>
+    <span class="role">主催</span><br>
+    <span class="name">小松 英子</span><br>
+    <span class="belong">竹富町立大原歯科診療所 院長</span><br><br>
+    <span class="role">講師</span><br>
+    <span class="name">蘭野 いっこ</span><br>
+    <span class="belong">花咲きアカデミー ／ ハピ脳®メソッド開発者</span>
+  </p>
+
+</div>
+
+</body>
+</html>
