@@ -253,8 +253,29 @@ html.js .fade.on{ opacity:1; transform:none; }
 .flowarrow{ text-align:center; color:var(--pink-lt); font-size:1.5rem; margin:-4px 0 6px; }
 
 /* ===== ご感想 ===== */
-.voiceimg{ max-width:840px; margin:0 auto; }
-.voiceimg img{ width:100%; height:auto; border-radius:14px; }
+.voiceimg{ max-width:700px; margin:0 auto 18px; }
+.voiceimg img{ width:100%; height:auto; }
+
+/* ご感想を縦に5つ並べる */
+.vlist{ max-width:620px; margin:0 auto; }
+.vbox{
+  background:var(--card); border-radius:100px;
+  box-shadow:var(--shadow); padding:18px 24px 18px 58px;
+  margin-bottom:12px; font-size:1.05rem; line-height:1.75;
+  position:relative;
+}
+.vbox::before{
+  content:"🌸"; position:absolute; left:20px; top:17px; font-size:1.3rem;
+}
+.vbox u{
+  text-decoration:none; color:var(--pink); font-weight:900;
+  font-family:var(--round);
+  background:linear-gradient(transparent 68%, #fcd3e0 68%);
+}
+@media (max-width:600px){
+  .vbox{ border-radius:20px; padding:16px 18px 16px 50px; font-size:1rem; }
+  .vbox::before{ left:16px; top:15px; }
+}
 .voices{ display:grid; gap:12px; max-width:600px; margin:0 auto; }
 .voice{
   background:var(--card); border-radius:18px; box-shadow:var(--shadow);
@@ -632,7 +653,15 @@ footer{
   <div class="wrap fade">
     <div class="fdiv"><span class="bar"></span><svg class="fl pink" width="20" height="20"><use href="#flower"/></svg><svg class="fl deep" width="27" height="27"><use href="#flower"/></svg><svg class="fl gold" width="20" height="20"><use href="#flower"/></svg><span class="bar"></span></div>
     <div class="voiceimg">
-      <img src="voices.jpg" alt="参加された方のご感想">
+      <img src="voices-head.jpg" alt="参加された方のご感想">
+    </div>
+
+    <div class="vlist">
+      <div class="vbox">AIでここまで簡単に未来が見えるとは<br><u>びっくりです！</u></div>
+      <div class="vbox">自己流でやっていたのと全然違うので<br><u>感動しました！</u></div>
+      <div class="vbox">夢が叶わない理由と、どうすればいいかおしえてもらえたので、<u>さっそく実践します！</u></div>
+      <div class="vbox">思ってもみなかった未来が見えたので、<br><u>驚きました！</u></div>
+      <div class="vbox">とにかく<u>楽しい！</u><br>いっこさんのナビがいい！</div>
     </div>
   </div>
 </section>
